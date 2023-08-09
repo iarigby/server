@@ -1,6 +1,13 @@
 # Synapse Matrix Server
 
 ## Setup
+### nginx
+```sh
+docker compose -f docker-compose-certbot.yml up webserver -d
+docker compose -f docker-compose-certbot.yml run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d mx.kernelpanicdisco.dev
+docker compose -f docker-compose-certbot.yml down webserver
+```
+### synapse
 - **don't forget to open ports**
 
 ```sh
