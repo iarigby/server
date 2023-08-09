@@ -1,1 +1,5 @@
 synapse-data
+.token
+msg_text
+nginx-keys
+certbot
